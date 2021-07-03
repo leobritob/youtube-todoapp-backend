@@ -5,6 +5,7 @@ import { TodoModule } from './app/todo/todo.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],

@@ -13,7 +13,7 @@ export class TodoService {
   ) {}
 
   async findAll() {
-    return await this.todoRepository.find();
+    return await this.todoRepository.find({ order: { createdAt: 'DESC' } });
   }
 
   async findOneOrFail(id: string) {

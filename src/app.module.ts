@@ -10,7 +10,7 @@ import { TodoModule } from './app/todo/todo.module';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
-        type: 'mariadb',
+        type: 'postgres',
         host: configService.get('DB_HOST', 'localhost'),
         port: Number(configService.get('DB_PORT', 3306)),
         username: configService.get('DB_USERNAME', 'root'),

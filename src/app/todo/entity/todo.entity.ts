@@ -18,7 +18,7 @@ export class TodoEntity {
   @ApiProperty()
   task: string;
 
-  @Column({ name: 'is_done', type: 'tinyint', width: 1 })
+  @Column({ name: 'is_done', type: 'int', width: 1 })
   @ApiProperty()
   isDone: number;
 

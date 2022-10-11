@@ -10,10 +10,7 @@ import { TodoModule } from './app/todo/todo.module';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
-        type: 'postgres',
-        ssl: {
-          rejectUnauthorized: false,
-        },
+        type: 'mysql',
         host: configService.get('DB_HOST', 'localhost'),
         port: Number(configService.get('DB_PORT', 3306)),
         username: configService.get('DB_USERNAME', 'root'),
